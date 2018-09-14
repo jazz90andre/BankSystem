@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./template.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="body">
+              <h:form>
+                  <tr>
+                      <h2>Transaction Deposit / Withdraw</h2>
+                      <td>
+                          <h1>Input No Bank Account</h1>
+                      </td>
+                      <td>
+                          <h:inputText value="#{bankSystemController.accountNo}" />
+                      </td>
+                      <td>
+                          <h1>Amount</h1>
+                      </td>
+                      <td>
+                          <h:inputText value="#{bankSystemController.amount}" />
+                      </td>
+                      <td>
+                          <h:commandButton value="Deposit/Withdraw" action="#{bankSystemController.validDeposit}" />
+                      </td>
+                      <td>
+                          <h:commandButton value="Cancel" action="index" />
+                      </td>
+                  </tr>
+              </h:form>
+    </ui:define>
+
+</ui:composition>

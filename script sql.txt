@@ -1,0 +1,18 @@
+CREATE TABLE `transaction_tbl` (
+  `tr_id` int unsigned NOT NULL AUTO_INCREMENT,
+  `account_no` int NOT NULL,
+`datetime` Timestamp NULL,
+  `amount` float NULL DEFAULT '0',
+`balance` float NULL,
+  PRIMARY KEY (`tr_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+ 
+CREATE TABLE `bank_account_tbl` (
+  `account_no` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(10) NOT NULL,
+`phone` VARCHAR(10) NOT NULL,
+  `email` VARCHAR(10) NULL,
+`balance` float NULL,
+  PRIMARY KEY (`account_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+ 

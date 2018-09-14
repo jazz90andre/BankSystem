@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./template.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="body">
+        <h:form>
+            <h2>Data Customer</h2>
+            <h1>Masukkan No Bank Account</h1>
+            <h:inputText value="#{bankSystemController.accountNo}" />
+            <h:commandButton value="Submit" action="#{bankSystemController.validData}" />
+        </h:form>
+        <h:form>
+            <h:dataTable value="#{bankSystemController.dataCustomer}" var="cust" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Bank Account No"/>
+                    </f:facet>
+                    <h:outputText value="#{cust.accountNo}"/>
+                </h:column>   
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Name"/>
+                    </f:facet>
+                    <h:outputText value="#{cust.name}"/>
+                </h:column>              
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Balance"/>
+                    </f:facet>
+                    <h:outputText value="#{cust.balance}"/>
+                </h:column>                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Email"/>
+                    </f:facet>
+                    <h:outputText value="#{cust.email}"/>
+                </h:column>    
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Phone"/>
+                    </f:facet>
+                    <h:outputText value="#{cust.phone}"/>
+                </h:column>    
+            </h:dataTable>            
+        </h:form>
+    </ui:define>
+
+</ui:composition>
