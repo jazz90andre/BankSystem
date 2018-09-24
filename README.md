@@ -23,7 +23,8 @@ Build in Java Language Program with:
 3. web-server GlassFish Server 4.1
 4. Database mysql
 
-See "Documentation result Web Banking.pdf" its has result program so far.
+See The result on this program. Check this link : https://drive.google.com/open?id=137jnU99gDlDTkT-0vIu7MLsMeD1GeMMw
+And Look "Result Web.pdf" its has result program so far.
 And another design architecture :
 1. class diagram; i've build simple.
 2. use case diagram
